@@ -43,9 +43,10 @@ $(document).ready(function() {
         $(".last-name").text(newContact.lastName);
         $(".amount").text(newContact.amountNumber);
       });
+      
   });
-});
-user;
+  
+
 // var account = function (name, balance){
 
 //   account.name = name;
