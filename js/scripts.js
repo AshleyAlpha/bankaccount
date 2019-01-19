@@ -1,6 +1,5 @@
 // business logic
-var newAccount;
-var balance;
+var newAccount, balance, newCreate;
 function Create(first, last, phone, id, date, amount) {
   this.firstName = first;
   this.lastName = last;
@@ -27,7 +26,7 @@ $(document).ready(function() {
     var inputtedId = $("input#new-id").val();
     var inputtedDate = $("input#new-date").val();
     var inputtedAmount = parseInt($("input#new-amount").val());
-    var newCreate = new Create(
+    newCreate = new Create(
       inputtedFirstName,
       inputtedLastName,
       inputtedPhone,
@@ -35,20 +34,30 @@ $(document).ready(function() {
       inputtedDate,
       inputtedAmount
     );
-    var bb = newCreate.amount;
+
     // console.log(newCreate);
     // $("ul#contacts").append(
     //   "<li><span class='create'>" + newCreate.fullName() + "</span></li>"
     // );
     $("#displ").text(newCreate.fullName());
     $("form#depo").submit(function(event) {
-      event.preventDefault();
+      var bb = newCreate.initialAmount;
       var deposit = parseInt($("input#new-amount1").val());
       console.log(deposit);
       console.log(newCreate.amount);
       balance = bb + deposit;
       $("#displ").text(balance);
+      event.preventDefault();
     });
+    $("#displ").text(newCreate.fullName());
+    $("form#withd").submit(function(event) {
+      var bb = newCreate.initialAmount;
+      var deposit = parseInt($("input#new-amount2").val());
+      console.log(deposit);
+      console.log(newCreate.amount);
+      balance = bb - deposit;
+      $("#displ").text(balance);
+      event.preventDefault();
 
     // $(".create")
     //   .last()
