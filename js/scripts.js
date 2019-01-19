@@ -49,15 +49,15 @@ $(document).ready(function() {
       $("#displ").text(balance);
       event.preventDefault();
     });
-    $("#displ").text(newCreate.fullName());
-    $("form#withd").submit(function(event) {
-      var bb = newCreate.initialAmount;
-      var deposit = parseInt($("input#new-amount2").val());
-      console.log(deposit);
-      console.log(newCreate.amount);
-      balance = bb - deposit;
-      $("#displ").text(balance);
-      event.preventDefault();
+    // $("#displ").text(newCreate.fullName());
+    // $("form#withd").submit(function(event) {
+    //   var bb = newCreate.initialAmount;
+    //   var deposit = parseInt($("input#new-amount2").val());
+    //   console.log(deposit);
+    //   console.log(newCreate.amount);
+    //   balance = bb - deposit;
+    //   $("#displ").text(balance);
+    //   event.preventDefault();
 
     // $(".create")
     //   .last()
