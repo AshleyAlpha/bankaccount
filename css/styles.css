@@ -2,10 +2,19 @@ html {
   background-color: teal;
 }
 .container {
-  background-color: aquamarine;
+  background-color: teal;
 }
 h2 {
   font-family: calibri;
   font-size: 40px;
   color: black;
+}
+h1 {
+  color: black;
+}
+#depo {
+  display: none;
+}
+#withd {
+  display: none;
 }

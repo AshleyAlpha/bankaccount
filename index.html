@@ -22,48 +22,100 @@
     <script src="js/scripts.js"></script>
 </head>
 
-<body class="container">
+<body >
+  <div class="container">
     <h1>Bank Account</h1>
-         <div class="row">
-          <div class="col-md-6">
-            <h2>Beneficiary's Account:</h2>
-            <form id="new-contact">
-              <div class="form-group">
-                <label for="new-first-name">First name</label>
-                <input type="text" class="form-control" id="new-first-name">
+     <div class="row">
+      <div class="container">
+        <div id="mamie">
+          <h2>Create Account</h2>
+          <form id="new-contact">
+            <div class="form-group">
+              <label for="new-first-name">First name</label>
+              <input type="text" class="form-control" id="new-first-name">
+            </div>
+            <div class="form-group">
+              <label for="new-last-name">Last name</label>
+              <input type="text" class="form-control" id="new-last-name">
+            </div>
+            <div class="form-group">
+                <label for="new-phone-number">Phone number</label>
+                <input type="number" class="form-control" id="new-phone-number">
               </div>
               <div class="form-group">
-                <label for="new-last-name">Last name</label>
-                <input type="text" class="form-control" id="new-last-name">
-              </div>
-              <div class="form-group">
-                  <label for="new-amount-number">Amount Number</label>
-                  <input type="number" class="form-control" id="new-amount-number">
+                  <label for="new-id">ID</label>
+                  <input type="number" class="form-control" id="new-id">
                 </div>
-  
-              <button type="submit" class="btn">Deposit</button>
-              <button type="submit" class="btn">Withdraw</button>
-            </form>
-  
-            <h2>Balance:</h2>
-            <ul id="contacts">
-  
-            </ul>
-          </div>
-          <div class="col-md-6">
-              <div id="show-contact">
-                <h2></h2>
-            
-                <p>First name: <span class="first-name"></span></p>
-                <p>Last name: <span class="last-name"></span></p>
-                <p>Amount: <span class="amount"></span></p>
+                <div class="form-group">
+                    <label for="new-date">Date</label>
+                    <input type="date" class="form-control" id="new-date">
+                  </div>
+                  <div class="form-group">
+                    <label for="new-amount">Amount</label>
+                    <input type="text" class="form-control" id="new-amount">
+                  </div>
 
-              </div>
-              <h3>saved</h3>
-            </div>  
-        </div>
+            <button type="submit" class="btn">Submit</button>
+            <!-- <button type="submit" class="btn">Deposit</button>
+            <button type="submit" class="btn">Withdraw</button> -->
+        </form>
+      </div>   
+      <h2>Your  Current Balance is:</h2><span><h3 id="displ"></h3></span>
+      
+<form id="depo" class="col-md-6">
+  <h1>Make your Deposit Here</h1>
+        <div class="form-group">
+            <label for="new-first-name">First name</label>
+            <input type="text" class="form-control" id="new-first-name">
+          </div>
+          <div class="form-group">
+            <label for="new-last-name">Last name</label>
+            <input type="text" class="form-control" id="new-last-name">
+          </div>
+          <div class="form-group">
+              <label for="new-amount">amount</label>
+              <input type="number" class="form-control" id="new-amount">
+            </div>
+            <button type="submit" class="btn">Deposit</button>
+</form>
+<form id="withd" class="col-md-6">
+<h1>Make your Withdraw Here</h1>
+    <div class="form-group">
+        <label for="new-first-name">First name</label>
+        <input type="text" class="form-control" id="new-first-name">
       </div>
-  
- </div>
+      <div class="form-group">
+        <label for="new-last-name">Last name</label>
+        <input type="text" class="form-control" id="new-last-name">
+      </div>
+      <div class="form-group">
+          <label for="new-amount">amount</label>
+          <input type="number" class="form-control" id="new-amount">
+        </div>
+        <button type="submit" class="btn">withdraw</button>
+</form>
+
+        <ul id="contacts">
+
+        </ul>
+      </div>
+      <!-- <div class="col-md-6">
+          <div id="show-contact">
+            <h2></h2>
+        
+            <p>First name: <span class="first-name"></span></p>
+            <p>Last name: <span class="last-name"></span></p>
+            <p>Phone Number: <span class="phone"></span></p>
+            <p>ID: <span class="id"></span></p>
+            <p>Date: <span class="date"></span></p>
+            <p>Amount: <span class="amount"></span></p>
+          
+
+          </div>
+          <h3>Saved</h3>
+        </div>   -->
+    </div>
+  </div>
+
 </body>
 </html>

@@ -1,82 +1,64 @@
 // business logic
-function Contact(first, last, amount) {
+
+function Create(first, last, phone, id, date, amount) {
   this.firstName = first;
   this.lastName = last;
-  this.amountNumber = amount;
+  this.phoneNumber = phone;
+  this.beneficialId = id;
+  this.creationDate = date;
+  this.initialAmount = amount;
 }
-Contact.prototype.fullName = function() {
-  return this.amountNumber;
+Create.prototype.fullName = function() {
+  return this.initialAmount;
+  // return this.firstName + "  " + this.lastName + "  " + this.initialAmount;
 };
-
 // user interface logic
 $(document).ready(function() {
   $("form#new-contact").submit(function(event) {
+    $("#mamie").hide();
+    $("#depo").show();
+    $("#withd").show();
     event.preventDefault();
 
     var inputtedFirstName = $("input#new-first-name").val();
     var inputtedLastName = $("input#new-last-name").val();
-    var inputtedamountNumber = $("input#new-amount-number").val();
-
-    var newContact = new Contact(
+    var inputtedPhone = $("input#new-phone-number").val();
+    var inputtedId = $("input#new-id").val();
+    var inputtedDate = $("input#new-date").val();
+    var inputtedAmount = $("input#new-amount").val();
+    var newCreate = new Create(
       inputtedFirstName,
       inputtedLastName,
-      inputtedamountNumber
+      inputtedPhone,
+      inputtedId,
+      inputtedDate,
+      inputtedAmount
     );
+    // console.log(newCreate);
+    // $("ul#contacts").append(
+    //   "<li><span class='create'>" + newCreate.fullName() + "</span></li>"
+    // );
+    $("#displ").text(newCreate.fullName());
 
-    $("ul#contacts").append(
-      "<li><span class='contact'>" + newContact.fullName() + "</span></li>"
-    );
+    // $(".create")
+    //   .last()
+    //   .click(function() {
+    //     $("#show-contact").hide();
+    //     $("#show-contact h2").text(newCreate.firstName);
+    //     $("#show-contact h2")
+    //       .first()
+    //       .click(function() {
+    //         $("h3").toggle();
+    //         // $(this).remove();
+    //       });
 
-    $(".contact")
-      .last()
-      .click(function() {
-        $("#show-contact").show();
-        $("#show-contact h2").text(newContact.firstName);
-        $("#show-contact h2")
-          .first()
-          .click(function() {
-            $("h3").toggle();
-            // $(this).remove();
-          });
-
-        $(".first-name").text(newContact.firstName);
-        $(".last-name").text(newContact.lastName);
-        $(".amount").text(newContact.amountNumber);
-      });
-      
+    //     $(".first-name").text(newCreate.firstName);
+    //     $(".last-name").text(newCreate.lastName);
+    //     $(".phone").text(newCreate.phoneNumber);
+    //     $(".id").text(newCreate.beneficialId);
+    //     $(".date").text(newCreate.creationDate);
+    //     $(".amount").text(newCreate.initialAmount);
+    //   });
   });
-  
-
-// var account = function (name, balance){
-
-//   account.name = name;
-//   account.balance = balance;
-
-//   account.deposit = function (depositAmount) {
-//     newBalance = account.balance - depositAmount;
-//     console.log("Your balance is now " + newBalance);
-//     if (newBalance <= 0) {
-//       console.log("You have insufficient funds!!!");
-//     }
-//   };
-
-//   account.withdraw = function (withdrawAmount){
-//     newBalance = account.balance - withdrawAmount;
-//     console.log("Your balance is now " + newBalance);
-//     if (newBalance <= 0) {
-//       console.log("You have insufficient funds!!!");
-//     }
-
-//   };
-
-//   account.transfer = function (transferAmount){
-// //got stuck here
-//   }
-
-//   console.log("Name: " + name + "; Balance: " + balance);
-// }
-
-// var AustinAccount = new account ("Austin", 500);
-// var KateAccount = new account ("Kate", 10000);
-// var GingerAccount = new account ("Ginger", 70000000);
-// var OreoAccount = new account ("Oreo", 900000000);
+});
+user;
